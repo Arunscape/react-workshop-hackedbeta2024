@@ -4,13 +4,13 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 
-const fetchJson = async (url) => {
+const fetchJson = async (url: string) => {
     const response = await fetch(url)
     const json = await response.json()
     return json
 }
 
-const fetchText = async (url) => {
+const fetchText = async (url: string) => {
     const response = await fetch(url)
     const text = await response.text()
     return text
@@ -33,7 +33,7 @@ export default function ExampleClientSideFetch() {
             <div>response from api: {data?.message}</div>
 
             <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">This is the code for this page!</h1>
-            <SyntaxHighlighter language="typescript" style={dark}>{code.data}</SyntaxHighlighter>
+            <SyntaxHighlighter language="typescript" style={dark}>{code.data as string}</SyntaxHighlighter>
         </div>
     </>
 }
