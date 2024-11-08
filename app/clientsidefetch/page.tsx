@@ -19,7 +19,7 @@ const fetchText = async (url: string) => {
 export default function ExampleClientSideFetch() {
 
     const { data, error, isLoading } = useSWR("/api", fetchJson)
-    const code = useSWR("https://raw.githubusercontent.com/Arunscape/react-workshop-hackedbeta2024/refs/heads/master/app/clientsidefetch/page.tsx", fetchText)
+    const code = useSWR("https://raw.githubusercontent.com/Arunscape/react-workshop-hackedbeta2024/refs/heads/main/app/clientsidefetch/page.tsx", fetchText)
 
     if (error || code.error)
         return <div>failed to load</div>

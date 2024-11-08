@@ -6,7 +6,7 @@ import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 async function getCode() {
 
-    const response = await fetch("https://raw.githubusercontent.com/Arunscape/react-workshop-hackedbeta2024/refs/heads/master/app/fetching/page.tsx")
+    const response = await fetch("https://raw.githubusercontent.com/Arunscape/react-workshop-hackedbeta2024/refs/heads/main/app/fetching/page.tsx")
     const code = await response.text()
 
     return code
